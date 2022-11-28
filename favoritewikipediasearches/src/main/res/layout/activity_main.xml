@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp"
+    android:stretchColumns="*">
+
+    <!-- tableRow0 -->
+    <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="#BC3131">
+
+        <EditText
+            android:id="@+id/queryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:backgroundTint="@color/light_blue"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:hint="@string/queryPrompt"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_blue" />
+    </TableRow>
+
+    <!-- tableRow1 -->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/tagEditText"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/light_blue"
+            android:backgroundTintMode="add"
+            android:hint="@string/tagPrompt"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_blue" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/save" />
+    </TableRow>
+
+    <!-- tableRow2 -->
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+
+        <TextView
+            android:id="@+id/taggedSearchesTextView"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_span="2"
+            android:padding="5dp"
+            android:text="@string/taggedSearches"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <!-- tableRow3 -->
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/blue">
+
+        <ScrollView
+            android:id="@+id/queryScrollView"
+            android:layout_width="match_parent"
+            android:layout_span="2"
+            android:padding="5dp">
+
+            <TableLayout
+                android:id="@+id/queryTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:stretchColumns="*" />
+        </ScrollView>
+
+    </TableRow>
+
+    <!-- tableRow4 -->
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/clearTagsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_span="2"
+            android:text="@string/clearTags" />
+    </TableRow>
+</TableLayout>
